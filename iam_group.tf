@@ -24,7 +24,7 @@ resource "aws_iam_group" "tf-group" {
 }
 resource "aws_iam_group_membership" "cbz_members" {
    name = "aws_members"
-   users = ["aws_iam_user.tf-user1.shaista","aws_iam_user.tf-user2.shweta","aws_iam_user.tf-user3.sagar","aws_iam_user.tf-user4.swapnil",
-"aws_iam_user.tf-user5.sarang"]
+   users = [aws_iam_user.tf-user1.shaista,aws_iam_user.tf-user2.shweta,aws_iam_user.tf-user3.sagar,aws_iam_user.tf-user4.swapnil,
+aws_iam_user.tf-user5.sarang]
     group = "aws_iam_group.tf-group.cloudblitz"        
 }
