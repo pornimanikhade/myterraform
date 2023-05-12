@@ -23,10 +23,7 @@ resource "aws_iam_group" "tf-group" {
     name = "cloudblitz"
 }
 resource "aws_iam_group_membership" "cbz_members" {
-   [user = aws_iam_user.tf-user1.shaista
-    user = aws_iam_user.tf-user2.shweta
-    user = aws_iam_user.tf-user3.sagar
-    user = aws_iam_user.tf-user4.swapnil
-    user = aws_iam_user.tf-user5.sarang]
-    groups =[aws_iam_group.tf-group.cloudblitz]        
+   users = ["aws_iam_user.tf-user1.shaista","aws_iam_user.tf-user2.shweta","aws_iam_user.tf-user3.sagar","aws_iam_user.tf-user4.swapnil",
+"aws_iam_user.tf-user5.sarang"]
+    groups =["aws_iam_group.tf-group.cloudblitz"]        
 }
