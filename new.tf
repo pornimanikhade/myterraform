@@ -5,11 +5,11 @@ resource "aws_iam_group_membership" "cloudblitz" {
   name = "aws-group1"
 
   users = [
-    aws_iam_user.pornima.tf-user1,
-    aws_iam_user.sadhika.tf-user2,
+    "aws_iam_user.pornima.tf-user1",
+    "aws_iam_user.sadhika.tf-user2",
   ]
 
-  group = aws_iam_group.tf_group.aws-group
+  group = "aws_iam_group.tf_group.aws-group"
 }
 
 resource "aws_iam_group" "tf_group" {
