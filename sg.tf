@@ -1,6 +1,6 @@
 resource "aws_security_group" "this" {
   name        = "demo-sg"
-  vpc_id = "vpc-088a111ca5a26a107"
+  vpc_id = "vpc-010f8b29f873ab601"
 
 
   ingress {
