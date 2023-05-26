@@ -1,19 +1,21 @@
 pipeline {
     agent any 
     stages {
-        stage('pull') { 
+        stage('Pull') { 
             steps {
-                echo 'pull stage update github'
+                git branch: 'main', url: 'https://github.com/ABHICLOUDS/student-ui.git'
+                sh '''ls
+                  pwd'''
             }
         }
-        stage('build') { 
+        stage('Build') { 
             steps {
-                echo 'build stage update github'
+            sh 'mvn clean package'
             }
         }
         stage('Deploy') { 
             steps {
-                echo 'deploy stage update github'
+               echo 'deploy stage'
             }
         }
     }
